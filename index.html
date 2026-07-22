@@ -8,15 +8,27 @@
 
 </head>
 <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="founder.html">Founder</a>
-    <a href="nicu-guide.html">NICU Guide</a>
-    <a href="resources.html">Resources</a>
-    <a href="parents-corner.html">Parent's Corner</a>
-    <a href="annabelles-story.html">Annabelle's Story</a>
-    <a href="support.html">Support</a>
-    <a href="contact.html">Contact</a>
+    <div class="nav-container">
+        <a href="index.html" class="nav-logo">
+            <img src="logo.png" alt="Project Butterfly Logo">
+        </a>
+
+        <button class="menu-toggle" onclick="toggleMenu()" aria-label="Open navigation menu">
+            ☰
+        </button>
+
+        <div class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="founder.html">Founder</a>
+            <a href="nicu-guide.html">NICU Guide</a>
+            <a href="resources.html">Resources</a>
+            <a href="parents-corner.html">Parent's Corner</a>
+            <a href="annabelles-story.html">Annabelle's Story</a>
+            <a href="support.html">Support</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
 </nav>
 <body>
 
@@ -286,6 +298,11 @@ Project Butterfly began with one family's NICU journey and a dream that no paren
 
 </footer>
 
-
+<script>
+function toggleMenu() {
+    const navLinks = document.getElementById("navLinks");
+    navLinks.classList.toggle("active");
+}
+</script>
 </body>
 </html>
